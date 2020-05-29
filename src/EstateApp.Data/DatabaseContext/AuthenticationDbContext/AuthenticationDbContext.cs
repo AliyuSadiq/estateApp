@@ -1,3 +1,7 @@
+using EstateApp.Data.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+
 namespace EstateApp.Data.DatabaseContext.AuthenticationDbContext
 {
     public class AuthenticationDbContext : IdentityDbContext<ApplicationUser>
@@ -5,7 +9,7 @@ namespace EstateApp.Data.DatabaseContext.AuthenticationDbContext
         public AuthenticationDbContext(DbContextOptions<AuthenticationDbContext>options)
         : base(options)
         {
-            
+
         }
     }
 }
