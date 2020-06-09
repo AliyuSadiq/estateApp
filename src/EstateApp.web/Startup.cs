@@ -137,7 +137,5 @@ namespace EstateApp.Web
 
         }
 
-        
-
     }
 }
