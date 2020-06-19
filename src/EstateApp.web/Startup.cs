@@ -25,7 +25,7 @@ namespace EstateApp.Web
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
-            services.AddDbContextPool < AuthenticationDbContext > (
+            services.AddDbContextPool<AuthenticationDbContext> (
                 options => options.UseSqlServer(Configuration.GetConnectionString("AuthenticationConnection"),
                     sqlServerOptions => {
                         sqlServerOptions.MigrationsAssembly("EstateApp.Data");
@@ -35,7 +35,7 @@ namespace EstateApp.Web
                 ));
 
 
-            services.AddDbContextPool < ApplicationDbContext > (
+            services.AddDbContextPool <ApplicationDbContext> (
                 options => options.UseSqlServer(Configuration.GetConnectionString("ApplicationConnection"),
 
                     sqlServerOptions => {
@@ -67,7 +67,9 @@ namespace EstateApp.Web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider svp) 
         {
-            if (env.IsDevelopment()) {
+            if (env.IsDevelopment())
+            
+            {
                 app.UseDeveloperExceptionPage();
             } else {
                 app.UseExceptionHandler("/Home/Error");
