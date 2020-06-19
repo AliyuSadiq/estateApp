@@ -1,5 +1,5 @@
 using System;
-// using System.Net.Mime
+using System.Threading.Tasks;
 using EstateApp.Data.DatabaseContext.ApplicationDbContext;
 using EstateApp.Data.DatabaseContext.AuthenticationDbContext;
 using Microsoft.AspNetCore.Builder;
@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using EstateApp.Data.Entities;
+using Microsoft.AspNetCore.HttpsPolicy;
 
 namespace EstateApp.Web
 {
